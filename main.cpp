@@ -3,8 +3,7 @@
 #include <vector>
 #include <type_traits>
 #include <limits>
-
-#include <typeinfo>
+#include <cstring>
 
 /*!
 	Шаблонная функция для печати айпишника из контейнера
@@ -25,7 +24,7 @@ printIP(const T& val, std::ostream& stream){
 	//	Массив байт для представления адреса
 	std::array<unsigned char, len> bytes;
 	//	Грязно, но удобно заполнить массив и работать с памятью напрмяую
-	memcpy(bytes.data(), &val, len);
+	std::memcpy(bytes.data(), &val, len);
 	
 	for(auto i=len-1;i>0;--i)
 		stream << std::to_string(bytes.at(i)) << ".";
