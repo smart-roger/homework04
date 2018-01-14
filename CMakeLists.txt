@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.2)
 
-project(ip_print VERSION 0.0.$TRAVIS_BUILD_NUMBER)
+project(ip_print VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Doxygen)
  if(DOXYGEN_FOUND)
