@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/smart-roger/homework04/main.cpp
+iostream
+-
+array
+-
+vector
+-
+type_traits
+-
+limits
+-
+cstring
+-
+

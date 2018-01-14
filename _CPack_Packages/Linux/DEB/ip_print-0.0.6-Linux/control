@@ -1,0 +1,9 @@
+Package: ip_print
+Version: 0.0.6
+Section: devel
+Priority: optional
+Architecture: amd64
+Installed-Size: 84
+Maintainer: __shurik@list.ru
+Description: ip_print built using CMake
+
