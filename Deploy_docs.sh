@@ -11,8 +11,8 @@ echo 'Setting up the script...'
 set -e
 
 # Create a clean working directory for this script.
-mkdir docs
-cd docs
+# mkdir docs
+# cd docs
 
 # Get the current gh-pages branch
 git clone -b gh-pages https://git@$GH_REPO_REF
