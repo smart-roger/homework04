@@ -20,6 +20,6 @@ deploy:
     skip-cleanup: true
     github-token: $GitPages_Key  # Set in travis-ci.org dashboard, marked secure
     keep-history: true
-    local-dir: docs
+    local-dir: docs\html
     on:
       branch: master	
