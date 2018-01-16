@@ -1,1 +1,0 @@
-/usr/local/clang-5.0.0/bin/clang++    -rdynamic CMakeFiles/ip_print.dir/main.cpp.o  -o ip_print 

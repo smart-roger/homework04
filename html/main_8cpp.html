@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ip_print: Файл main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ip_print
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;array&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;type_traits&gt;</code><br/>
+<code>#include &lt;limits&gt;</code><br/>
+<code>#include &lt;cstring&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#main_8cpp" alt=""/></div>
+<map name="main_8cpp" id="main_8cpp">
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aed9425f14250751ff28735baf53a4cc3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aed9425f14250751ff28735baf53a4cc3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; std::is_integral&lt; T &gt;::value, <br class="typebreak"/>
+void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aed9425f14250751ff28735baf53a4cc3">printIP</a> (const T &amp;val, std::ostream &amp;stream)</td></tr>
+<tr class="separator:aed9425f14250751ff28735baf53a4cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35b38cf4c146b8f49d9c5bd6b895c36"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac35b38cf4c146b8f49d9c5bd6b895c36"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt;!std::is_integral&lt; T &gt;::value <br class="typebreak"/>
+&amp;&amp;std::is_integral&lt; typename <br class="typebreak"/>
+T::value_type &gt;::value, void &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac35b38cf4c146b8f49d9c5bd6b895c36">printIP</a> (const T &amp;container, std::ostream &amp;stream)</td></tr>
+<tr class="separator:ac35b38cf4c146b8f49d9c5bd6b895c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a448b987a33a1e7cd3f29e2c062a423dc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a448b987a33a1e7cd3f29e2c062a423dc"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt;!std::is_integral&lt; T &gt;::value <br class="typebreak"/>
+&amp;&amp;!std::is_integral&lt; typename <br class="typebreak"/>
+T::value_type &gt;::value, void &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a448b987a33a1e7cd3f29e2c062a423dc">printIP</a> (const T &amp;container, std::ostream &amp;stream)</td></tr>
+<tr class="separator:a448b987a33a1e7cd3f29e2c062a423dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">main</a> (int argc, char const *argv[])</td></tr>
+<tr class="separator:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a class="anchor" id="abf9e6b7e6f15df4b525a2e7705ba3089"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Запуск основной программы - только примеры </p>
+
+</div>
+</div>
+<a class="anchor" id="aed9425f14250751ff28735baf53a4cc3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;std::is_integral&lt;T&gt;::value, void&gt;::type printIP </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Шаблонная функция для печати айпишника из контейнера</p>
+<p>Реализация для целых чисел (char, int, long) double и строки не рассматриваются </p>
+
+</div>
+</div>
+<a class="anchor" id="ac35b38cf4c146b8f49d9c5bd6b895c36"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;!std::is_integral &lt;T&gt;::value&amp;&amp; std::is_integral &lt;typename T::value_type&gt;::value, void&gt;::type printIP </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>container</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Реализация вывода на печать адреса, когда аргумент - контейнер с целыми числами Для элементов контейнера вызывается метод std::to_string. Необходимо для корректного вывода значений типов char. </p>
+
+</div>
+</div>
+<a class="anchor" id="a448b987a33a1e7cd3f29e2c062a423dc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;!std::is_integral &lt;T&gt;::value &amp;&amp; !std::is_integral &lt;typename T::value_type&gt;::value, void&gt;::type printIP </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>container</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Реализация вывода на печать адреса, когда аргумент - контейнер НЕ с целыми числами (например, строками) Элементы контейнера выводятся непосредственно в переданный поток. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
