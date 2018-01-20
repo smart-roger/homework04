@@ -1,19 +1,18 @@
 ﻿#include <iostream>
+
 #include <array>
+#include <string>
 #include <vector>
+#include <list>
 #include <type_traits>
-#include <limits>
-#include <cstring>
 
 /*!
 	Шаблонная функция для печати айпишника из контейнера
 */
 
 /*! Реализация для целых чисел (char, int, long)
-	double и строки не рассматриваются
+	контейнеры, double и строки не рассматриваются
 */
-
-
 template <typename T>
 typename std::enable_if<std::is_integral<T>::value, void>::type
 printIP(const T& val, std::ostream& stream){
@@ -32,15 +31,24 @@ printIP(const T& val, std::ostream& stream){
 	stream << std::endl;
 }
 
-
-/*!	Реализация вывода на печать адреса, когда аргумент - контейнер с целыми числами
-	Для элементов контейнера вызывается метод std::to_string. Необходимо для корректного вывода значений типов char.
+/*!	Реализация функции для строк. Выводится "как есть"
 */
-template<typename T>
-typename std::enable_if<!std::is_integral <T>::value&&
-						std::is_integral <typename T::value_type>::value, 
-void>::type 
+template <class T>
+typename std::enable_if< std::is_same<T, std::string>::value, void>::type
+printIP (const T& val, std::ostream& stream){
+	stream << val << std::endl;
+}
+
+/*!	Реализация вывода на печать адреса, когда аргумент - контейнер
+	Для элементов контейнера вызывается метод std::to_string. 
+	Необходимо для корректного вывода значений типов char (иначе выводятся не числа, а символы).
+*/
+template<class T>
+typename std::enable_if<!std::is_integral <T>::value &&
+						!std::is_same<T, std::string>::value
+					,void>::type 
 printIP(const T& container, std::ostream& stream){
+	
 	//	Итераторы для работы с контейнерами
 	auto first = container.begin();
 	auto last = container.end();
@@ -55,25 +63,6 @@ printIP(const T& container, std::ostream& stream){
 	}
 }
 
-/*!	Реализация вывода на печать адреса, когда аргумент - контейнер НЕ с целыми числами (например, строками)
-	Элементы контейнера выводятся непосредственно в переданный поток.
-*/
-template<typename T>
-typename std::enable_if<!std::is_integral <T>::value &&
-						!std::is_integral <typename T::value_type>::value, 
-void>::type 
-printIP(const T& container, std::ostream& stream){
-	auto first = container.begin();
-	auto last = container.end();
-	
-	if(first!=last){
-		
-		for(--last; first!=last; ++first)
-			stream << *first <<".";
-		stream << *first <<std::endl;
-	}
-}
-
 /*!
 	Запуск основной программы - только примеры
 */
@@ -81,27 +70,20 @@ int main(int argc, char const *argv[])
 {
     try
     {
-		//	Тестирование вывода целочисленных параметров
-		char test_ch (0x01);
-		printIP(test_ch, std::cout);
-		
-		short test_short(0x0123);
-		printIP(test_short, std::cout);
-		
-		int test_int(0x012345);
-		printIP(test_int, std::cout);
-		
-		long long test_ll(0x0123456789ABCDEF);
-		printIP(test_ll, std::cout);
+		//	Тестирование вывода целочисленных параметров		
+		printIP(char(-1), std::cout);
+		printIP(short(0), std::cout);
+		printIP(int(2130706433), std::cout);
+		printIP((long long)(8875824491850138409), std::cout);
+		//	Тестирование вывода строки
+		printIP(std::string("1.2.3.4.5.6.7.8.99"), std::cout);
 				
 		//	Тестирование вывода контейнеров с числами
 		printIP(std::vector<int>{0x012345,0x987654,0x112233}, std::cout);
 		printIP(std::vector<unsigned char>{0x11,0x22,0x33,0x44}, std::cout);
-		printIP(std::vector<int>{0x012345,0x987654,0x112233}, std::cout);
-		printIP(std::vector<long>{1,2,3,4}, std::cout);
-		
-		//	Тестирование вывода контейнеров со строками
-		printIP(std::vector<std::string>{"91","82","73","214"}, std::cout);
+		printIP(std::list<int>{0x012345,0x987654,0x112233}, std::cout);
+		printIP(std::list<long long>{75824491850138409,75824491850138408,75824491850138410,75824491850138407}, std::cout);
+				
     }
     catch(const std::exception &e)
     {
