@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.2)
 
-project(ip_print VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Doxygen)
  if(DOXYGEN_FOUND)
@@ -11,15 +11,15 @@ find_package(Doxygen)
     message(STATUS "WARNING: Doxygen not found - Reference manual will not be created")
 endif(DOXYGEN_FOUND)
 
-add_executable(ip_print main.cpp)
+add_executable(print_ip main.cpp)
 
-set_target_properties(ip_print PROPERTIES
+set_target_properties(print_ip PROPERTIES
 	CXX_STANDARD 14
 	CXX_STANDARD_REQUIRED ON
 	COMPILE_OPTIONS -Wpedantic -Wall -Wextra
 )
 
-install(TARGETS ip_print RUNTIME DESTINATION bin)
+install(TARGETS print_ip RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
