@@ -2,6 +2,7 @@
 
 #include <array>
 #include <string>
+#include <cstring>
 #include <vector>
 #include <list>
 #include <type_traits>
