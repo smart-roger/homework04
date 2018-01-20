@@ -86,10 +86,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;array&gt;</code><br/>
-<code>#include &lt;vector&gt;</code><br/>
-<code>#include &lt;type_traits&gt;</code><br/>
-<code>#include &lt;limits&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;cstring&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;list&gt;</code><br/>
+<code>#include &lt;type_traits&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Граф включаемых заголовочных файлов для main.cpp:</div>
 <div class="dyncontent">
@@ -105,20 +106,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 &lt; std::is_integral&lt; T &gt;::value, <br class="typebreak"/>
 void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aed9425f14250751ff28735baf53a4cc3">printIP</a> (const T &amp;val, std::ostream &amp;stream)</td></tr>
 <tr class="separator:aed9425f14250751ff28735baf53a4cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac35b38cf4c146b8f49d9c5bd6b895c36"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac35b38cf4c146b8f49d9c5bd6b895c36"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+<tr class="memitem:ac0b7728c76b6107c95ec514fe99ac2c6"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac0b7728c76b6107c95ec514fe99ac2c6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same<br class="typebreak"/>
+&lt; T, std::string &gt;::value, <br class="typebreak"/>
+void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac0b7728c76b6107c95ec514fe99ac2c6">printIP</a> (const T &amp;val, std::ostream &amp;stream)</td></tr>
+<tr class="separator:ac0b7728c76b6107c95ec514fe99ac2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ab2fbc03a7e5eb649d5086afe4366b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a50ab2fbc03a7e5eb649d5086afe4366b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
 &lt;!std::is_integral&lt; T &gt;::value <br class="typebreak"/>
-&amp;&amp;std::is_integral&lt; typename <br class="typebreak"/>
-T::value_type &gt;::value, void &gt;<br class="typebreak"/>
-::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac35b38cf4c146b8f49d9c5bd6b895c36">printIP</a> (const T &amp;container, std::ostream &amp;stream)</td></tr>
-<tr class="separator:ac35b38cf4c146b8f49d9c5bd6b895c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a448b987a33a1e7cd3f29e2c062a423dc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a448b987a33a1e7cd3f29e2c062a423dc"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt;!std::is_integral&lt; T &gt;::value <br class="typebreak"/>
-&amp;&amp;!std::is_integral&lt; typename <br class="typebreak"/>
-T::value_type &gt;::value, void &gt;<br class="typebreak"/>
-::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a448b987a33a1e7cd3f29e2c062a423dc">printIP</a> (const T &amp;container, std::ostream &amp;stream)</td></tr>
-<tr class="separator:a448b987a33a1e7cd3f29e2c062a423dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&amp;&amp;!std::is_same&lt; T, <br class="typebreak"/>
+std::string &gt;::value,void &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a50ab2fbc03a7e5eb649d5086afe4366b">printIP</a> (const T &amp;container, std::ostream &amp;stream)</td></tr>
+<tr class="separator:a50ab2fbc03a7e5eb649d5086afe4366b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">main</a> (int argc, char const *argv[])</td></tr>
 <tr class="separator:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -176,18 +175,47 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Шаблонная функция для печати айпишника из контейнера</p>
-<p>Реализация для целых чисел (char, int, long) double и строки не рассматриваются </p>
+<p>Реализация для целых чисел (char, int, long) контейнеры, double и строки не рассматриваются </p>
 
 </div>
 </div>
-<a class="anchor" id="ac35b38cf4c146b8f49d9c5bd6b895c36"></a>
+<a class="anchor" id="ac0b7728c76b6107c95ec514fe99ac2c6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;!std::is_integral &lt;T&gt;::value&amp;&amp; std::is_integral &lt;typename T::value_type&gt;::value, void&gt;::type printIP </td>
+          <td class="memname">std::enable_if&lt; std::is_same&lt;T, std::string&gt;::value, void&gt;::type printIP </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Реализация функции для строк. Выводится "как есть" </p>
+
+</div>
+</div>
+<a class="anchor" id="a50ab2fbc03a7e5eb649d5086afe4366b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;!std::is_integral &lt;T&gt;::value &amp;&amp; !std::is_same&lt;T, std::string&gt;::value ,void&gt;::type printIP </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>container</em>, </td>
@@ -205,36 +233,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Реализация вывода на печать адреса, когда аргумент - контейнер с целыми числами Для элементов контейнера вызывается метод std::to_string. Необходимо для корректного вывода значений типов char. </p>
-
-</div>
-</div>
-<a class="anchor" id="a448b987a33a1e7cd3f29e2c062a423dc"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt;!std::is_integral &lt;T&gt;::value &amp;&amp; !std::is_integral &lt;typename T::value_type&gt;::value, void&gt;::type printIP </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>container</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>stream</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Реализация вывода на печать адреса, когда аргумент - контейнер НЕ с целыми числами (например, строками) Элементы контейнера выводятся непосредственно в переданный поток. </p>
+<p>Реализация вывода на печать адреса, когда аргумент - контейнер Для элементов контейнера вызывается метод std::to_string. Необходимо для корректного вывода значений типов char (иначе выводятся не числа, а символы). </p>
 
 </div>
 </div>
