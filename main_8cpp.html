@@ -106,18 +106,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 &lt; std::is_integral&lt; T &gt;::value, <br class="typebreak"/>
 void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aed9425f14250751ff28735baf53a4cc3">printIP</a> (const T &amp;val, std::ostream &amp;stream)</td></tr>
 <tr class="separator:aed9425f14250751ff28735baf53a4cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0b7728c76b6107c95ec514fe99ac2c6"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:ac0b7728c76b6107c95ec514fe99ac2c6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same<br class="typebreak"/>
-&lt; T, std::string &gt;::value, <br class="typebreak"/>
-void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac0b7728c76b6107c95ec514fe99ac2c6">printIP</a> (const T &amp;val, std::ostream &amp;stream)</td></tr>
-<tr class="separator:ac0b7728c76b6107c95ec514fe99ac2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50ab2fbc03a7e5eb649d5086afe4366b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a50ab2fbc03a7e5eb649d5086afe4366b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
-&lt;!std::is_integral&lt; T &gt;::value <br class="typebreak"/>
-&amp;&amp;!std::is_same&lt; T, <br class="typebreak"/>
-std::string &gt;::value,void &gt;<br class="typebreak"/>
-::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a50ab2fbc03a7e5eb649d5086afe4366b">printIP</a> (const T &amp;container, std::ostream &amp;stream)</td></tr>
-<tr class="separator:a50ab2fbc03a7e5eb649d5086afe4366b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a046ff72cc53e3c358ee34d72c0af1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5a046ff72cc53e3c358ee34d72c0af1c">printIP</a> (const std::string &amp;val, std::ostream &amp;stream)</td></tr>
+<tr class="separator:a5a046ff72cc53e3c358ee34d72c0af1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f5fa287684c4cdda297f3ebe93fbef"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a41f5fa287684c4cdda297f3ebe93fbef"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same<br class="typebreak"/>
+&lt; T, std::vector&lt; typename <br class="typebreak"/>
+T::value_type &gt; &gt;::value||std::is_same<br class="typebreak"/>
+&lt; T, std::list&lt; typename <br class="typebreak"/>
+T::value_type &gt; &gt;::value,void &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a41f5fa287684c4cdda297f3ebe93fbef">printIP</a> (const T &amp;container, std::ostream &amp;stream)</td></tr>
+<tr class="separator:a41f5fa287684c4cdda297f3ebe93fbef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">main</a> (int argc, char const *argv[])</td></tr>
 <tr class="separator:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -179,16 +177,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac0b7728c76b6107c95ec514fe99ac2c6"></a>
+<a class="anchor" id="a5a046ff72cc53e3c358ee34d72c0af1c"></a>
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_same&lt;T, std::string&gt;::value, void&gt;::type printIP </td>
+          <td class="memname">void printIP </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>val</em>, </td>
         </tr>
         <tr>
@@ -208,14 +204,14 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a50ab2fbc03a7e5eb649d5086afe4366b"></a>
+<a class="anchor" id="a41f5fa287684c4cdda297f3ebe93fbef"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;!std::is_integral &lt;T&gt;::value &amp;&amp; !std::is_same&lt;T, std::string&gt;::value ,void&gt;::type printIP </td>
+          <td class="memname">std::enable_if&lt;std::is_same&lt;T, std::vector &lt;typename T::value_type&gt; &gt;::value || std::is_same&lt;T, std::list &lt;typename T::value_type&gt; &gt;::value ,void&gt;::type printIP </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>container</em>, </td>
