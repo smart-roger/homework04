@@ -22,8 +22,7 @@ printIP(const T& val, std::ostream& stream){
 	static_assert(len>0," sizeof returned negative value?! ");
 	
 	//	Массив байт для представления адреса
-	std::array<unsigned char, len> bytes;
-	//	Грязно, но удобно заполнить массив и работать с памятью напрмяую
+	std::array<unsigned char, len> bytes;	
 	std::memcpy(bytes.data(), &val, len);
 	
 	for(auto i=len-1;i>0;--i)
@@ -34,9 +33,7 @@ printIP(const T& val, std::ostream& stream){
 
 /*!	Реализация функции для строк. Выводится "как есть"
 */
-template <class T>
-typename std::enable_if< std::is_same<T, std::string>::value, void>::type
-printIP (const T& val, std::ostream& stream){
+void printIP (const std::string& val, std::ostream& stream){
 	stream << val << std::endl;
 }
 
@@ -45,8 +42,8 @@ printIP (const T& val, std::ostream& stream){
 	Необходимо для корректного вывода значений типов char (иначе выводятся не числа, а символы).
 */
 template<class T>
-typename std::enable_if<!std::is_integral <T>::value &&
-						!std::is_same<T, std::string>::value
+typename std::enable_if<std::is_same<T, std::vector <typename T::value_type> >::value
+						|| std::is_same<T, std::list <typename T::value_type> >::value
 					,void>::type 
 printIP(const T& container, std::ostream& stream){
 	
